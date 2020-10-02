@@ -1,5 +1,10 @@
 package com.imooc.array;
 
+/**
+ * Here is the update that I'd like to test
+ *
+ * Another test
+ * */
 public class Array<E> {
     private E[] data;
     private int size;
