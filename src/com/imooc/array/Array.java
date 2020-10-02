@@ -1,9 +1,7 @@
 package com.imooc.array;
 
 /**
- * Here is the update that I'd like to test
- *
- * Another test
+ * This array supports generics for storing any type of data
  * */
 public class Array<E> {
     private E[] data;
