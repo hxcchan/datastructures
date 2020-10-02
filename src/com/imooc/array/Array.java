@@ -2,6 +2,8 @@ package com.imooc.array;
 
 /**
  * This array supports generics for storing any type of data
+ *
+ * development
  * */
 public class Array<E> {
     private E[] data;
