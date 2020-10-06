@@ -46,6 +46,10 @@ public class Array<E> {
             throw new IllegalArgumentException("Failed, index is not proper.");
         }
 
+        if (size == data.length) {
+            resize(2 * data.length);
+        }
+
         for (int i = size - 1; i >= index; i --) {
             data[i + 1] = data[i];
         }
@@ -95,6 +99,10 @@ public class Array<E> {
             data[i - 1] = data[i];
         }
         size--;
+
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return ret;
     }
 
@@ -128,5 +136,13 @@ public class Array<E> {
         res.append("]");
 
         return res.toString();
+    }
+
+    private void resize(int newCapacity){
+        E[] newData = (E[])new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 }
