@@ -58,7 +58,7 @@ public class Array<E> {
         size ++;
     }
 
-    E get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Failed, index is not proper.");
         }
@@ -119,6 +119,14 @@ public class Array<E> {
         if (index != -1) {
             remove(index);
         }
+    }
+
+    public E getLast(){
+        return get(size - 1);
+    }
+
+    public E getFirst(){
+        return get(0);
     }
 
     @Override
