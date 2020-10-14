@@ -65,6 +65,10 @@ public class LoopQueue<E> implements Queue<E> {
         return data.length - 1;
     }
 
+
+    /**
+     * 扩容的基本想法： 先创建一个新的数组，然后把原来数组的引用赋值给这个新的数组。
+     * */
     private void resize(int newCapacity) {
         E[] newData = (E[])new Object[newCapacity + 1];
         for (int i = 0; i < size; i ++) {
