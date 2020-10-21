@@ -53,7 +53,6 @@ public class LinkedList<E> {
         prev.next = new Node(e, prev.next);
         size++;
 
-
     }
 
     public void addFirst(E e){
@@ -121,4 +120,29 @@ public class LinkedList<E> {
         res.append("NULL");
         return res.toString();
     }
-}
+
+    public E remove(int index){
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Get failed");
+        }
+        Node prev = dummyHead;
+        Node cur = dummyHead.next;
+
+        for (int i = 0; i < index; i++){
+            prev = prev.next;
+            cur = cur.next;
+        }
+        E result = cur.e;
+        prev.next = cur.next;
+        cur.next = null;
+        return result;
+    }
+
+    public E removeFirst(){
+        return remove(0);
+    }
+
+    public E removeLast(){
+        return remove(size - 1);
+
+    }}
