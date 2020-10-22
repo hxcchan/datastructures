@@ -4,6 +4,11 @@ import com.imooc.linkedlist.LinkedList;
 
 public class LinkedListQueue<E> implements Queue<E> {
 
+    /**
+     * 由于tail节点删除比较困难，所以在tail节点添加
+     * 在head节点进行出队操作
+     * */
+
     private class Node {
         public E e;
         public Node next;
