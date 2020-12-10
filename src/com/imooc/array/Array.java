@@ -5,6 +5,9 @@ package com.imooc.array;
  *
  * development
  * */
+
+// git testing
+    // 5th, hope I can do this today
 public class Array<E> {
     private E[] data;
     private int size;
